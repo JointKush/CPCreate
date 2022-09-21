@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <title>Create Account</title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="styles/fonts.css" />
+    <link type="text/css" rel="stylesheet" href="styles/create.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="scripts/create.js"></script>
+</head>
+
+<body>
+    <div id="c_header">
+        <h2>Create a Free Account</h2>
+        <div id="startAgain">Start Again</div>
+        <div class="c_progressBar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+    </div>
+   
+    <div id="c_container">
+        <div id="c_content">
+            <img id="logo" src="images/logo.png" /><img id="safety" src="images/safety.png" />
+            <div class="rules-section">
+                <div class="grid-rules">
+                    <div class="item">
+                        <div>
+                            <div id="rule-title">Respect other penguins</div>
+                            Club Penguin does not tolerate any swearing, bullying or mean behavior toward other penguins. Disciplinary action will be taken should any one of these occur while playing.
+                        </div>
+                        <img id="rule-image" src="images/respect.png" />
+                    </div>
+                    <div class="item">
+                        <div>
+                            <div id="rule-title">No inappropriate talk</div>
+                            References to drugs and alcohol related activities, and sexual, racial or otherwise inappropriate talk are not permitted.
+                        </div>
+                        <img id="rule-image" src="images/inapp.png" />
+                    </div>
+                    <div class="item">
+                        <div>
+                            <div id="rule-title">Never reveal personal information</div>
+                            The best way to stay safe online is to NEVER share your real name, phone number, address, email or passwords.
+                        </div>
+                        <img id="rule-image" src="images/personal.png" />
+                    </div>
+                    <div class="item">
+                        <div>
+                            <div id="rule-title">No cheating</div>
+                            Use of third party programs to cheat is prohibited. Players who use any third party programs while playing risk being permanently banned.
+                        </div>
+                        <img id="rule-image" src="images/cheating.png" />
+                    </div>
+                </div>
+                <hr />
+                <div id="agree"> <span class="toggle">
+                  <input type="checkbox" id="agree" name="agree"/><label>I agree to the Club Penguin Rules.</label>
+                  </span>
+                </div>
+                <div id="terms"> <span class="toggle">
+                  <input type="checkbox" id="terms" name="terms"/><label>I agree to the <a id="hyper" href="#">Terms of Use</a></label>
+                  </span>
+                </div>
+                <button class="btn" name="submit">Continue</button>
+            </div>
+            <div class="color-section">
+                <div id="color-form">
+                    <p id="epname">Enter Your Penguin Name:</p>
+                   <!--<span class="bubble">
+                        <div id="bubble-msg"></div>
+                    </span>-->
+                    <input type="text" name="username" class="username" id="inputaligncenter" maxlength="16"/> <span toggle="#random_username" class="fa fa-fw fa-refresh random-username" title="Random Username"></span>
+                    <div id="cpsmall">Minimum 4 characters: use only numbers, letters and spaces.</div>
+                    <p id="cpname">Click on a Color:</p>
+                    <div id="palletes"></div>
+                    <img id="paintbucket" src="images/paintbucket.png" />
+                </div>
+                <div class="doll-container"> <img class="doll" src="images/doll.png" /> <span class="penguinName">Penguin Name</span> </div>
+                <button class="btn" name="submit">Continue</button>
+            </div>
+            <div class="info-section">
+                <div id="info-form">
+                    <div id="ppname-wrapper">
+                        Penguin Password:
+                        <div id="ppsmall">This is the password you will use to login to Club Penguin. </div>
+                        <input type="password" name="password" class="password" placeholder="Password"><span toggle="#password" class="fa fa-fw fa-eye field_icon show-password"></span>
+                        <input type="password" name="cpassword"  class="cpassword" placeholder="Confirm Password"><span toggle="#c_password" class="fa fa-fw fa-eye field_icon show-password"></span>
+                        <p id="activatedTxt">your penguin must be activated before you will be able to play at club penguin</p>
+                        Parent's Email Address:
+                        <div id="ppsmall">Please enter your parent's valid email address. Club Penguin will send your parent an e-mail with an activation code.</div>
+                        <div class="env"> <img src="images/envelope.png">
+                            <input type="text" class="email" name="email">
+                        </div>
+                    </div>
+                    <div class="doll-container fixed"> <img class="doll" src="images/doll.png" /> <span class="penguinName">Penguin Name</span> </div>
+                </div>
+                <button type="submit" class="btn" name="submit">Continue</button>
+            </div>
+            <div class="done-section">
+                <h2 class="done">%username%, your Account Has Been Successfully Created!</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!--
+	Made By Cliff 2022
+	Club Penguin's Error Prompt Recreation HTML/CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Error Prompt Template
+	</title>
+	<link type="text/css" rel="stylesheet" href="../styles/fonts.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style type="text/css">
+	body {
+		background-color: #D4D4D4;
+	}
+	.error-container {
+		display: none;
+		position: relative;
+		top: 67px;
+		margin: auto;
+		width: 436px;
+        height: 226px;
+		border-radius: 14px;
+		background-color: #FF6600;
+		box-shadow: 3px 2px 0px 1px #c94b01, 1px 0px 0px 3px #ffcc00, 1px 1px 0px 7px #983901, 1px 1px 0px 10px #ffffff, 1px 1px 0px 14px #E9E9E9;
+	}
+	#error-content {
+		position: relative;
+		color: #000000;
+		text-align: center;
+		margin: 2px;
+		font-size: 16pt;
+		font-family: ArialRegular;
+	}
+	#error-btn {
+		position: relative;
+    	top: 147px;
+	    margin: auto;
+		width: 170px;
+		height: 54px;
+		border-radius: 16px;
+		box-shadow: 0px 1px 0 3px #983901, 2px 3px 0 3px #ffcc00, 0px -1px 0 4px #c94b01;
+		cursor: pointer;
+	}
+	#error-btn:hover  {
+		background-color: #C94B01;
+	}
+	#error-msg-txt {
+		position: absolute;
+		top: 36px;
+		width: 100%;
+		left: 0;
+	}
+	#error-txt {
+		line-height: 53px;
+		color: #ffffff;
+		font-size: 23px;
+	}
+	</style>
+	<script type="text/javascript">
+		function showErrorPrompt() {
+			let errorContArr = ["#error-msg-txt", "#error-txt"];
+			const errorMsgTxt = "Test Message", errorBtnTxt = "Ok";
+		
+			errorContArr.forEach((divs) => {
+				let setText = divs === "#error-msg-txt" ? errorMsgTxt : errorBtnTxt;
+				replaceErrorText(setText, $(divs));
+			});
+			$(".error-container").show();
+		}
+		function replaceErrorText(text, divs) {
+			divs.text(divs.text().replace(/%.+?%/, text));
+		}
+		
+		window.onload = showErrorPrompt;
+	</script>
+</head>
+<body>
+    <div class="error-container">
+		<div id="error-content">
+			<div id="error-msg-txt"> 
+				%MSG PlACEHOLDER TEXT%
+			</div>
+			<div id="error-btn">
+				<div id="error-txt">%BUTTON PLACEHOLDER TEXT%</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

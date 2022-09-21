@@ -1,0 +1,115 @@
+<html>
+<!--
+		Written By Cliff 2022
+		Simple Penguin Color Selector HTML/JS 
+-->
+<head>
+	<title>Doll</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<style type="text/css">
+	#penguinDoll {
+		background-color: #003366;
+		-webkit-transition: all 500ms ease;
+		-moz-transition: all 500ms ease;
+		-ms-transition: all 500ms ease;
+		-o-transition: all 500ms ease;
+		transition: all 500ms ease;
+	}
+	
+	#palletes {
+		width: 332px;
+	}
+	
+	#palletes,
+	#penguinDoll {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: -moz-none;
+		-o-user-select: none;
+		user-select: none;
+	}
+	
+	#penguinColorName {
+		color: #000;
+		font-weight: bold;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: medium;
+	}
+	
+	.tinyPallete {
+		border: 2px solid #000;
+		border-radius: 5px;
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		cursor: pointer;
+		transition: all .1s;
+	}
+	
+	.tinyPallete.active {
+		transform: scale(.8);
+		box-shadow: 0 0 4px 3px white, 0 0 6px 4px yellow;
+	}
+	
+	.tinyPallete:hover {
+		border: 2px solid #f6bd56;
+	}
+	</style>
+	<script type="text/javascript">
+	function loadPalletes() {
+		let colorIndexNum = 0;
+		for(let palletes in penguinColors) {
+			let colorHex = penguinColors[palletes],
+				colorIndex = palletes,
+				colorIndexCurrNum = ++colorIndexNum;
+			$('#palletes').append(`<div data-id="${colorIndexCurrNum}" class="tinyPallete" style="background: #${colorHex}"></div> `);
+		}
+		$("#palletes").on("click", function(e) {
+			currPalleteId = $(e.target).attr('data-id'); 
+			e.currentTarget.querySelector('.active')?.classList.remove('active') 
+			if(e.target.classList.contains('tinyPallete')) {
+				e.target.classList.add('active');
+			}
+			$("#penguinColorName").text(penguinColorByIndex(currPalleteId, true));
+            $("#penguinDoll").css('background-color', '#' + penguinColorByIndex(currPalleteId, false));
+			console.log(currPalleteId)
+		});
+	}
+
+	function penguinColorByIndex(index, keys) {
+		if(keys) {
+			return(Object.keys(penguinColors)[--index]);
+		}
+		return(Object.values(penguinColors)[--index]);
+	}
+    let currPalleteId = 0; 
+	let penguinColors = { 
+		"Blue": "003366",
+		"Green": "009900",
+		"Pink": "FF3399",
+		"Black": "333333",
+		"Red": "CC0000",
+		"Orange": "FF6600",
+		"Yellow": "FFCC00",
+		"Purple": "660099",
+		"Brown": "996600",
+		"Peach": "FF6666",
+		"Dark Green": "006600",
+		"Light Blue": "0099CC",
+		"Lime Green": "8AE302",
+		"Sensei Gray": "93A0A4",
+		"Aqua": "02A797",
+		"Arctic White": "F0F0D8",
+	};
+	</script>
+</head>
+
+<body onload="loadPalletes();"> <!--this isn't really ideal but it works :/-->
+	<div id="form">
+		<div id="penguinColorName"></div>
+		<img id="penguinDoll" src="doll.png">
+		<div id="palletes"></div>
+	</div>
+</body>
+
+</html>

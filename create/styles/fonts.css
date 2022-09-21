@@ -1,0 +1,16 @@
+@font-face {
+    font-family: BurbankSmallBold;
+    src: url(fonts/BurbankSmallBold.ttf);
+}
+@font-face {
+    font-family: BurbankSmallMed;
+    src: url(fonts/BurbankSmallMedium.ttf);
+}
+@font-face {
+    font-family: CCFaceFrontBoldItalic;
+    src: url(fonts/CCFaceFrontBoldItalic.ttf);
+}
+@font-face {
+    font-family: ArialRegular;
+    src: url(fonts/arialReg.ttf);
+}

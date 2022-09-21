@@ -1,0 +1,432 @@
+body {
+	background-color: #d3d3d3;
+}
+input::placeholder {
+	color: #666666;
+	font-family: sans-serif;
+	font-size: 10pt;
+}
+input[type="text"], [type="password"], [type="email"] {
+	border: 2px solid #ffbc3a;
+	width: 248px;
+	height: 26px;
+	outline: none;
+	font-family: ArialRegular;
+	margin-bottom: 7px;
+}
+input[type="checkbox"] {
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-o-appearance: none;
+	cursor: pointer;
+}
+#inputaligncenter {
+	text-align: center;
+}
+input[type="checkbox"]:before {
+	content: "";
+	font-size: 15px;
+	color: transparent !important;
+	background-color: #ffffff;
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #ffbc3a;
+	margin-right: 7px;
+}
+input[type="checkbox"]:checked:before {
+	background: url("../images/check.png") 1px 1px no-repeat;
+}
+#c_container {
+	border: 2px solid #ffbc3a;
+	background-color: #fffbca;
+	border-radius: 21px;
+	margin-top: 2px;
+	margin-bottom: 15px;
+	height: 469px;
+	width: 750px;
+}
+#c_header {
+	display: inline-flex;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+}
+#c_content {
+	margin: 5px 21px;
+}
+h2 {
+	font-weight: lighter;
+	color: #01539c;
+	font-family: BurbankSmallBold;
+}
+.btn {
+	border: 2px solid #d57e00;
+	background-color: #ffb409;
+	border-radius: 21px;
+	width: 155px;
+	height: 34px;
+	cursor: pointer;
+	font-family: CCFaceFrontBoldItalic;
+	color: #fff;
+	text-shadow: 2px 2px 2px black;
+	margin: -33px -2px;
+	float: right;
+	font-size: 13pt;
+}
+.btn:hover {
+	background-color: #ff9a00;
+}
+.c_progressBar {
+	position: relative;
+	display: flex;
+	counter-reset: step;
+	width: 163px;
+	justify-content: space-between;
+	left: 221px;
+}
+.c_progressBar::before, .progress {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 100%;
+	background-color: #999999;
+	z-index: 1;
+}
+.progress {
+	background-color: #01539c;
+	width: 0%;
+	transition: 0.3s;
+}
+.progress-step {
+	width: 1.1875rem;
+	background-color: #999999;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.progress-step::before {
+	content: "\a0";
+}
+.progress-step-active {
+	background: url(../images/star.png) 0 0 no-repeat;
+	width: 1.6rem;
+	height: 1.6rem;
+	margin: -0.2rem -1rem -0.2rem -0.4rem;
+}
+.progress-step-check {
+	position: relative;
+	background-color: #01539C;
+}
+.progress-step-check::before {
+	position: absolute;
+   /*content: "\2713";
+   */
+	width: 100%;
+	height: 100%;
+	top: 8px;
+	left: 13px;
+	font-size: 12px;
+}
+#startAgain {
+	position: relative;
+	left: 208px;
+	font-family: BurbankSmallMed;
+	color: #666666;
+	cursor: pointer;
+}
+#startAgain:hover {
+	color: #01539c;
+}
+#logo {
+	margin: 20px 18px;
+}
+.grid-rules {
+	display: grid;
+	grid-auto-rows: 116px;
+	grid-gap: 4px 51px;
+	grid-template-areas: "left right";
+	grid-template-columns: auto auto;
+	margin: 27px 14px;
+}
+.item {
+	color: #333333;
+	font-size: 10pt;
+	font-family: ArialRegular;
+	display: flex;
+	align-items: flex-start;
+}
+#rule-title {
+	color: #01539c;
+	font-size: 12pt;
+	font-family: BurbankSmallBold;
+}
+hr {
+	position: relative;
+	border-top: 2px solid #ffbc3a;
+	width: 647px;
+	top: -35px;
+	border-top: 2px solid #ffbc3a;
+	width: 647px;
+}
+#safety {
+	float: right;
+	margin: 13px 19px;
+}
+#hyper {
+	color: #01539c;
+	font-family: BurbankSmallBold;
+	text-decoration: none;
+}
+#terms, #agree {
+	font-family: ArialRegular;
+	font-size: 10pt;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.toggle {
+	display: flex;
+	align-items: center;
+	width: 250px;
+}
+#epname {
+	font-family: BurbankSmallBold;
+	color: #01539c;
+	font-size: 10pt;
+	width: 220px;
+	margin: auto;
+	line-height: 26px;
+}
+#cpname {
+	font-family: BurbankSmallBold;
+	color: #01539c;
+	font-size: 10pt;
+	position: relative;
+	left: 11%;
+	margin-left: -145px;
+}
+#cpsmall {
+	font-family: ArialRegular;
+	font-size: 8pt;
+	color: #333333;
+	width: 220px;
+	margin: auto;
+}
+#ppsmall {
+	font-family: ArialRegular;
+	font-size: 8pt;
+	color: #333333;
+	margin-bottom: 13px;
+	width: 289px;
+}
+.tinyPallete {
+	border: 2px solid #000;
+	border-radius: 5px;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+.tinyPallete.active {
+	transform: scale(0.8);
+	box-shadow: 0 0 4px 3px white, 0 0 6px 4px yellow;
+}
+.tinyPallete:hover {
+	border: 2px solid #f6bd56;
+}
+.doll-container {
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+	top: -96px;
+}
+.doll-container.fixed {
+	top: 44px 
+}
+.doll {
+	width: 167px;
+	height: 187px;
+	background-color: #003366;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+#palletes, .doll {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	user-select: none;
+}
+.penguinName {
+	display: block;
+	font-size: 12pt;
+	font-family: ArialRegular;
+	font-weight: bolder;
+	color: #01539c;
+	text-transform: capitalize;
+}
+#palletes {
+	width: 370px;
+	margin: auto;
+}
+#paintbucket {
+	float: right;
+	margin-top: -28px;
+}
+.rules-section:not(:first-of-type) {
+	display: none;
+}
+.color-section {
+	display: none;
+}
+.info-section {
+	display: none;
+}
+.done-section {
+	display: none;
+}
+#info-form {
+	display: flex;
+	flex-direction: row-reverse;
+}
+#color-form {
+	text-align: center;
+	margin: 9px 8px -75px 86px;
+}
+#ppname-wrapper {
+	font-family: BurbankSmallBold;
+	color: #01539c;
+	font-size: 11pt;
+	margin: 30px;
+	margin-bottom: 71px;
+	margin-left: 81px;
+}
+#activatedTxt {
+	color: #ff0000;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 8pt;
+	font-family: ArialRegular;
+	width: 244px;
+	margin-top: -1px;
+	margin-bottom: 29px;
+}
+.env {
+	display: flex;
+	align-items: flex-end;
+}
+.random-username {
+	cursor: pointer;
+	color: #01539c;
+}
+.show-password {
+	cursor: pointer;
+}
+.bubble {
+	display: block;
+	position: relative;
+	width: 266px;
+	margin: 0 auto;
+}
+#bubble-msg {
+	font-family: ArialRegular;
+	font-weight: bold;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 3px 0 0 rgba(0,62,113,.3);
+	-webkit-box-shadow: 0 3px 0 0 rgb(0 62 113 / 30%);
+	box-shadow: 0 3px 0 0rgba(0,62,113,.3);
+	position: absolute;
+	bottom: 13px;
+	left: 0;
+	z-index: 10;
+	width: 223px; 
+	padding: 6px 10px; 
+	color: #01539c;
+	font-size: 12px;
+	line-height: 1.1;
+	text-align: center;
+	border: 2px solid #ffbc3a;
+	background: 0 0;
+	background-color: #fffbca;
+}
+#bubble-msg:after {
+	position: absolute;
+    height: 0;
+    width: 0;
+    content: "";
+    line-height: 0;
+    font-size: 0;
+    left: 107px;
+    bottom: -15px;
+    border-left: 13px solid transparent;
+    border-top: 13px solid #ffbc3a;
+    border-right: 13px solid transparent;
+}
+
+.error-block-container {
+	display: none;
+	position: relative;
+    border-radius: 14px;
+    background-color: rgba(225,225,225,.5);
+    height: 100%;
+    z-index: 5017;
+    top: -458px;
+}
+.error-container {
+	position: relative;
+    top: 102px;
+	margin: auto;
+	width: 436px;
+	height: 226px;
+	border-radius: 14px;
+	background-color: #FF6600;
+	box-shadow: 3px 2px 0px 1px #c94b01, 1px 0px 0px 3px #ffcc00, 1px 1px 0px 7px #983901, 1px 1px 0px 10px #ffffff, 1px 1px 0px 14px #E9E9E9;
+}
+#error-content {
+	position: relative;
+	color: #000000;
+	text-align: center;
+	margin: 2px;
+	font-size: 16pt;
+	font-family: ArialRegular;
+}
+#error-btn {
+    position: absolute;
+    top: 157px;
+    right: 125px;
+	margin: auto;
+	width: 170px;
+	height: 54px;
+	border-radius: 16px;
+	box-shadow: 0px 1px 0 3px #983901, 2px 3px 0 3px #ffcc00, 0px -1px 0 4px #c94b01;
+	cursor: pointer;
+	background-color: #FF6600;
+}
+#error-btn:hover {
+	background-color: #C94B01;
+}
+#error-msg-txt {
+	position: relative;
+	top: 33px;
+	width: 100%;
+	left: 0;
+}
+#error-txt {
+	line-height: 53px;
+	color: #FFF;
+	font-size: 23px;
+}
